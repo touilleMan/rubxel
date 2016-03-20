@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
 
-require "cell.rb"
+require_relative "cell"
 require "sdl"
 
 DEFAULT_RESUME="resume.rb"
@@ -64,7 +64,7 @@ class Map
     width.times { |x|
       length.times { |y|
         @cells[x][y].height =
-        ((buffer[offset] + buffer[offset + 1] + buffer[offset + 2]) / 3)  *
+        ((buffer[offset].to_i + buffer[offset + 1].to_i + buffer[offset + 2].to_i) / 3)  *
         MAX_HEIGHT / 0xff
         offset +=  step
       }

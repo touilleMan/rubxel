@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
 
-require "map.rb"
-require "camera.rb"
-require "system.rb"
+require_relative "map"
+require_relative "camera"
+require_relative "system"
 
 APP_NAME="RubXel"
 DEFAULT_PATH="../ressources/default"
